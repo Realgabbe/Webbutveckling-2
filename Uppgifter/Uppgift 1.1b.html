@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="simple.js">
+            function start() {
+
+                circle(250, 150, 100, "yellow"); //HUVUD
+                rectangle(205, 250, 100, 200, "red"); //KROPP
+
+                //ARMAR
+                line(200, 250, 170, 350, 15, "yellow"); //VÄNSTER ÖVERARM
+                line(170, 350, 110, 300, 15, "yellow"); //VÄNSTER UNDERARM
+                circle(179, 290, 15, "Yellow"); //VÄNSTER BICEP
+                line(310, 250, 380, 350, 15, "yellow"); //HÖGER ÖVERARM
+                line(375, 350, 420, 280, 15, "yellow"); //HÖGER UNDERARM
+                circle(347, 290, 15, "Yellow"); //HÖGER BICEP
+
+                //HÄNDER
+                rectangle(112, 292, -55, 15, "yellow"); //VÄNSTER HAND
+                rectangle(473, 272, -55, 15, "yellow"); //HÖGER HAND
+
+                //DRÄKT
+
+                line(200, 250, 200, 450, 10, "black"); //VÄNSTER YTTRE STRECK
+                line(305, 250, 300, 450, 10, "black"); //HÖGER YTTRE STRECK
+                line(200, 250, 250, 450, 10, "black"); //VÄNSTER DIAGONALA STRECK
+                line(305, 250, 250, 450, 10, "black"); //HÖGER DIAGONALA STRECK
+                line(195, 450, 305, 450, 10, "black"); //NEDRE STRECK
+
+                //ÖGONBRYN OCH ÖGON
+
+                line(230, 105, 200, 100, 1, "black"); //VÄNSTER ÖGONBRYN
+                line(300, 85, 270, 106, 1, "black"); //HÖGER ÖGONBRYN
+
+                circle(220, 115, 8, "black"); //HÖGER ÖGA
+                circle(280, 115, 8, "black"); //VÄNSTER ÖGA
+
+                //NÄSA
+
+                arc(175, 165, 90, 30 , 5, "black"); //NÄSRYGG
+                circle(250, 158, 5, "black"); //BASEN AV NÄSAN?
+                
+                //MUN
+
+                arc(250,230,50,55*Math.PI,1.5*Math.PI); //MUNNEN
+
+                //BEN
+                line(200, 455, 100, 540, 22, "lightblue"); //VÄNSTER LÅR
+                line(100, 540, 80, 660, 18, "lightblue"); //VÄNSTER VAD
+                line(90, 660, 30, 660, 25, "black"); //VÄNSTER FOT
+                line(300, 455, 400, 540, 22, "lightblue"); //HÖGER LÅR
+                line(400, 540, 280, 660, 18, "lightblue"); //HÖGER VAD
+                line(270, 660, 340, 660, 25, "black"); //HÖGER FOT
+
+
+                
+            }
+        </script>
+    </body>
+</html>
