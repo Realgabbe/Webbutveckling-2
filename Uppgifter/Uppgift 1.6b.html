@@ -11,7 +11,10 @@
                 x = 0;
                     while (x<=400){ //While loop som körs medan x är under eller lika med 400
                         
-                        line(0, 0, x, 200); //Linje som ritas ut mellan x1=0,y1=0 och x2= variabeln x, y2= 200
+                        line(0, 0, x, 200); //Linje som ritas ut mellan x1=0, y1=0 och x2= variabeln x, y2= 200
+                        line(400, 0, x, 200); //Linje som ritas ut mellan x1=400, y1=0 och x2= variabeln x, y2= 200
+                        line(0, 200, x, 0); //Linje som ritas ut mellan x1=0, y1=200 och x2= variabeln x, y2= 0
+                        line(400, 200, x, 0); //Linje som ritas ut mellan x1=400, y1=200 och x2= variabeln x, y2= 0
                         x+=10; //lägger till 10 till värdet av variabeln x
 
                     }
