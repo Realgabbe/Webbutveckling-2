@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="simple.js">
+            function start() { 
+                for (var i=1; i<=500 ;i++){ //FOR LOOP SOM BÖRJAR MED ATT I HAR VÄRDET 1 OCH SLUTAR NÄR I ÄR LIKA MED 10000.
+
+                    var colors = Math.floor(Math.random()*4); //DETTA ÄNDRAR VARIABELN COLORS TILL DET TALL SOM NÄRMASTE HELTAL TILL DET TALET Math.random()*4 generar, avrundat nedåt.
+                
+                    if(colors == 0)
+                    {
+                        color ="red"; //Ifall variabeln colors blir 0 så blir rektangeln röd.
+                    }
+                    else if (colors == 1)
+                    {
+                        color="green"; //Ifall variabeln colors blir 0 så blir rektangeln grön.
+                    }
+                    else if (colors == 2)
+                    {
+                        color="blue"; //Ifall variabeln colors blir 0 så blir rektangeln blå.
+                    }
+                    else{
+                        color="yellow"; //Ifall variabeln colors blir 0 så blir rektangeln gul.
+                    }
+
+                    line(Math.random()*200, Math.random()*200, Math.random()*200, Math.random()*200, 5 ,color);//Detta generar kvadraten med färgen som bestämdse innan med hjälp av Math.random() och Math.floor. Kvadraten har sidan 10 och placeras ut någonstans innanför xmin=0, xmax=200 och ymin=0, ymax=200. 
+            
+                }
+            }
+        </script>
+    </body>
+</html>

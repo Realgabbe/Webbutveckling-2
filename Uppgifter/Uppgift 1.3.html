@@ -8,8 +8,9 @@
     <body>
         <script src="simple.js">
             function start() {
-                for (var i=1; i<=30 ;i++)
-                    rectangle(12*i,12*i,10,10,"red");
+                for (var i=1; i<=200 ;i++){ //FOR LOOP SOM BÖRJAR MED ATT I HAR VÄRDET 1 OCH SLUTAR NÄR I ÄR LIKA MED 200.
+                    rectangle(Math.random()*200,Math.random()*200,10,10,"red");//DENNA BIT KOD ÄR DET SOM UTFÖRS I FOR-LOOPEN. DEN RITAR UT EN RÖD REKTANGEL VID SLUMPVÄSSIGA VALDA KOORDINATER MELLAN xmin=0, ymin = 0 och xmax = 200, ymax = 200. REKTANGLARNA HAR SIDORNA 10,10 
+                }
             }
         </script>
     </body>
