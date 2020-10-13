@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="simple.js">
+            function start() { 
+
+                var angle = 0;
+
+                while(angle < 2 * 3.14){
+                    line(totalWidth/2, totalHeight/2, (totalWidth/2) + (cos(angle) * 200), (totalHeight/2) + (sin(angle) * 200), 1, "black");
+                    angle += (2*3.14) / 72;
+                }
+            }
+        </script>
+    </body>
+</html>
