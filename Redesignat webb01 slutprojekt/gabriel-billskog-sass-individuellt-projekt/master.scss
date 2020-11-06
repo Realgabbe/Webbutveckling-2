@@ -1,0 +1,181 @@
+@import "./variables";
+@import "./functions";
+
+@font-face{
+    font-family: Monotype Corsiva;
+    src:url(monotype_corsiva.ttf)
+}
+
+html {
+    body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 992px 1fr;
+        grid-template-areas:
+            'header header header'
+            '. content .'
+            'footer footer footer';
+            
+        &.start { /* &.start gör att start klassen inheritar css:en från ovanliggande klasser vilket i detta fall är klassen body och i sin tur från klassen html men klassen html har inte någon css tilldelad till sig i detta fall.*/
+            grid-template-columns: auto;
+            grid-template-areas: 
+                'header'
+                'content'
+                'footer';
+        }
+
+        header {
+            grid-area: header;
+            background-color: #fff;
+            border: 2px solid #7F7F7F;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            height: 120px;
+
+            .topnav {
+                display: flex;
+                flex-flow: row nowrap;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+                font-family: Bodoni MT;
+                font-weight: bold;
+                margin: 0;
+                font-size: 1em;
+
+                &>a {
+                    padding: 0.15em 0.4em;
+                    margin: 0 1em;
+                    color: black;
+                    background-color: #F2F2F2;
+                    text-decoration: none;  
+                    border: 2px solid #7F7F7F;
+                    border-radius: 7px;
+
+                    transition: all 500ms ease;
+
+                    &:hover{
+                        color: white;
+                        background: #7F7F7F;
+                    }
+                }
+            }
+        }
+
+
+
+        main {
+            display:block;
+            grid-area: content;
+            height: calc(100vh - 184px);
+            text-align: center;
+
+            .row {
+                display: flex;
+                flex-flow: row;
+            }
+
+            &.start .hundar_jag_minns { /* Här assignas css:en under till både start klassen och hundar_jag_minns klassen */
+                align-items: center;
+                height: 100%;
+                
+                .col-right {
+
+                    &.hundar_jag_minns {
+                        float: right;
+                    }
+
+                    &.start {
+                        height: 100%;
+                    }
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+
+                        &.startimg{
+                            height:100%;
+                        }
+                    }
+                }
+
+                .col-left {
+
+                    &.hundar_jag_minns{
+                        float:left;
+                    }
+
+                    &.start {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: center;
+
+                        &>h1, h2 { /* Css:en under assignas till h1:or och h2:or som är under klassen start och innuti klassen col-left. Den ärver också css:en som är assignad till specifikt col-left och klassen start när den är under col-left.*/
+                            margin:0;
+                        }
+
+                        &>h1 {
+                            font-weight: bold;
+                            color:black;
+                            font-size: 5em;
+                        }
+
+                        &>h2 {
+                            font-weight: bold;
+                            color:black;
+                            font-size: 6em;
+                            font-family: Monotype Corsiva;
+                        }
+
+                        &>h3 {
+                            font-weight: bold;
+                            color: rgb(46, 46, 46);
+                            font-size: 1.5em;
+                        }
+
+                        &>p{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Generella element*/
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+p.button {
+    margin: 1em auto;
+    padding: 0.15em 0.4em;
+    color: black;
+    background-color: #F2F2F2;
+    text-decoration: 0;
+    border: 2px solid #7F7F7F;
+    border-radius: 7px;
+    width: max-content;
+    font-weight: bold;
+    font-family: Bodoni MT;
+    font-size: 2em;
+    transition: all 500ms ease;
+
+    &:hover {
+        color: white;
+        background: #7F7F7F;
+    }
+
+    a {
+        all: unset;
+        cursor: pointer;
+        font-family: sans-serif;
+    }
+}

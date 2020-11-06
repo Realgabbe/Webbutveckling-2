@@ -1,0 +1,10 @@
+@import "./variables";
+
+
+@mixin color($color){ //@mixin = funktioner; @include är för att köra det.
+    color: $color; //Här assignar @mixinen color färgen till värdet av $color.
+}  
+
+@mixin font($font){
+    font: $font;
+}

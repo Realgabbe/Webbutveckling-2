@@ -1,0 +1,204 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Monotype Corsiva;
+  src: url(monotype_corsiva.ttf);
+}
+
+html body {
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 992px 1fr;
+      grid-template-columns: 1fr 992px 1fr;
+      grid-template-areas: 'header header header' '. content .' 'footer footer footer';
+}
+
+html body.start {
+  /* &.start gör att start klassen inheritar css:en från ovanliggande klasser vilket i detta fall är klassen body och i sin tur från klassen html men klassen html har inte någon css tilldelad till sig i detta fall.*/
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+      grid-template-areas: 'header' 'content' 'footer';
+}
+
+html body header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  background-color: #fff;
+  border: 2px solid #7F7F7F;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  height: 120px;
+}
+
+html body header .topnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Bodoni MT;
+  font-weight: bold;
+  margin: 0;
+  font-size: 1em;
+}
+
+html body header .topnav > a {
+  padding: 0.15em 0.4em;
+  margin: 0 1em;
+  color: black;
+  background-color: #F2F2F2;
+  text-decoration: none;
+  border: 2px solid #7F7F7F;
+  border-radius: 7px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+html body header .topnav > a:hover {
+  color: white;
+  background: #7F7F7F;
+}
+
+html body main {
+  display: block;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+  height: calc(100vh - 184px);
+  text-align: center;
+}
+
+html body main .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+html body main.start .hundar_jag_minns {
+  /* Här assignas css:en under till både start klassen och hundar_jag_minns klassen */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+html body main.start .hundar_jag_minns .col-right.hundar_jag_minns {
+  float: right;
+}
+
+html body main.start .hundar_jag_minns .col-right.start {
+  height: 100%;
+}
+
+html body main.start .hundar_jag_minns .col-right img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html body main.start .hundar_jag_minns .col-right img.startimg {
+  height: 100%;
+}
+
+html body main.start .hundar_jag_minns .col-left.hundar_jag_minns {
+  float: left;
+}
+
+html body main.start .hundar_jag_minns .col-left.start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main.start .hundar_jag_minns .col-left.start > h1, html body main.start .hundar_jag_minns .col-left.start h2 {
+  /* Css:en under assignas till h1:or och h2:or som är under klassen start och innuti klassen col-left. Den ärver också css:en som är assignad till specifikt col-left och klassen start när den är under col-left.*/
+  margin: 0;
+}
+
+html body main.start .hundar_jag_minns .col-left.start > h1 {
+  font-weight: bold;
+  color: black;
+  font-size: 5em;
+}
+
+html body main.start .hundar_jag_minns .col-left.start > h2 {
+  font-weight: bold;
+  color: black;
+  font-size: 6em;
+  font-family: Monotype Corsiva;
+}
+
+html body main.start .hundar_jag_minns .col-left.start > h3 {
+  font-weight: bold;
+  color: #2e2e2e;
+  font-size: 1.5em;
+}
+
+html body main.start .hundar_jag_minns .col-left.start > p {
+  margin: 0;
+}
+
+/*Generella element*/
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+p.button {
+  margin: 1em auto;
+  padding: 0.15em 0.4em;
+  color: black;
+  background-color: #F2F2F2;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+  border: 2px solid #7F7F7F;
+  border-radius: 7px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: bold;
+  font-family: Bodoni MT;
+  font-size: 2em;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+p.button:hover {
+  color: white;
+  background: #7F7F7F;
+}
+
+p.button a {
+  all: unset;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+/*# sourceMappingURL=master.css.map */
